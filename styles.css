@@ -84,6 +84,7 @@ img {
 header {
   position: sticky;
   top: 0;
+  z-index: 50;
   z-index: 100;
   background: rgba(18, 23, 28, 0.92);
   backdrop-filter: blur(12px);
@@ -220,12 +221,14 @@ header {
 }
 
 .mobile-nav a {
+  font-size: 24px;
   font-size: 20px;
   font-family: 'Space Grotesk', 'Inter', sans-serif;
   font-weight: 600;
   color: var(--cream);
   opacity: 0.8;
   transition: all 0.2s ease;
+  padding: 8px 24px;
   padding: 8px 16px;
 }
 
@@ -764,6 +767,8 @@ section.block {
   position: fixed;
   inset: 0;
   background: rgba(0, 0, 0, 0.8);
+  z-index: 100;
+  align-items: center;
   z-index: 110;
   align-items: flex-start;
   justify-content: center;
@@ -785,8 +790,10 @@ section.block {
 .modal-content {
   background: var(--slate-900);
   border: 1px solid var(--slate-800);
+  padding: 48px;
   padding: 40px;
   max-width: 500px;
+  width: 90%;
   width: 100%;
   margin: auto;
   clip-path: polygon(0 24px, 24px 0, 100% 0, 100% calc(100% - 24px), calc(100% - 24px) 100%, 0 100%);
@@ -816,6 +823,7 @@ section.block {
 }
 
 .modal h2 {
+  font-size: 28px;
   font-size: 24px;
   margin-bottom: 12px;
   color: var(--cream);
@@ -824,10 +832,12 @@ section.block {
 .modal p {
   color: var(--stone-400);
   font-size: 14px;
+  margin-bottom: 28px;
   margin-bottom: 24px;
 }
 
 .form-group {
+  margin-bottom: 20px;
   margin-bottom: 16px;
 }
 
@@ -835,6 +845,7 @@ section.block {
   display: block;
   font-size: 14px;
   color: var(--cream);
+  margin-bottom: 8px;
   margin-bottom: 6px;
   font-weight: 500;
 }
@@ -843,6 +854,7 @@ section.block {
 .form-group textarea,
 .form-group select {
   width: 100%;
+  padding: 12px;
   padding: 10px 12px;
   background: var(--slate-800);
   border: 1px solid var(--slate-700);
@@ -1029,8 +1041,8 @@ footer .wrap {
     font-size: 36px;
   }
 
-  /* Hide desktop nav, show hamburger */
-  .nav-links {
+  .nav-links,
+  .nav > .nav-cta {
     display: none;
   }
 
